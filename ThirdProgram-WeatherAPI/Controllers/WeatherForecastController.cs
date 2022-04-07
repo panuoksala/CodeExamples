@@ -6,7 +6,7 @@ namespace ThirdProgram_WeatherAPI.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
+        private static List<string> Summaries = new List<string>
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
@@ -25,9 +25,30 @@ namespace ThirdProgram_WeatherAPI.Controllers
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+                Summary = Summaries[Random.Shared.Next(Summaries.Count)]
             })
             .ToArray();
+        }
+
+
+        [HttpGet("{amount:int}")]
+        public IEnumerable<WeatherForecast> Get(int amount)
+        {
+            return Enumerable.Range(1, amount).Select(index => new WeatherForecast
+            {
+                Date = DateTime.Now.AddDays(index),
+                TemperatureC = Random.Shared.Next(-20, 55),
+                Summary = Summaries[Random.Shared.Next(Summaries.Count)]
+            })
+            .ToArray();
+        }
+
+        [HttpPost]
+        public IActionResult Insert([FromBody]string summary)
+        {
+            Summaries.Add(summary);
+
+            return Ok();
         }
     }
 }
