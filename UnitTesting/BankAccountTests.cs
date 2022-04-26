@@ -1,3 +1,4 @@
+using System;
 using Xunit;
 
 namespace UnitTesting
@@ -19,6 +20,22 @@ namespace UnitTesting
             // Assert
             double actual = account.Balance;
             Assert.Equal(expected, actual, 3);
+        }
+
+        [Fact]
+        public void Debig_WithTooBigAmount_ThrowsArgumentOutOfRangeException()
+        {
+            // Arrange
+            double beginningBalance = 20;
+            double debitAmount = 35;
+            var account = new BankAccount("Mr. Bryan Walton", beginningBalance);
+
+            // Act & Assert
+            Assert.Throws<ArgumentOutOfRangeException>(() =>
+            {
+                account.Debit(debitAmount);
+            });
+
         }
     }
 }
