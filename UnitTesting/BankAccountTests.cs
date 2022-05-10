@@ -23,7 +23,7 @@ namespace UnitTesting
         }
 
         [Fact]
-        public void Debig_WithTooBigAmount_ThrowsArgumentOutOfRangeException()
+        public void Debit_WithTooBigAmount_ThrowsArgumentOutOfRangeException()
         {
             // Arrange
             double beginningBalance = 20;
