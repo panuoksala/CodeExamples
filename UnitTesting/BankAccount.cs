@@ -23,7 +23,7 @@ namespace UnitTesting
 
         public string CustomerName
         {
-            get { return m_customerName; }
+            get { return m_customerName.ToUpper(); }
         }
 
         public double Balance
