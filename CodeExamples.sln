@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FourthProgram-WeatherAPI", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThirdProgram-WeatherAPI-Extended", "ThirdProgram-WeatherAPI-Extended\ThirdProgram-WeatherAPI-Extended.csproj", "{1DF73CBD-9E03-48E5-815D-61B3E5F4B1AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FifthProgram", "FifthProgram\FifthProgram.csproj", "{CF356557-9EE2-482E-99F1-A671951ADD20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FifthProgram", "FifthProgram\FifthProgram.csproj", "{CF356557-9EE2-482E-99F1-A671951ADD20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqSamples", "LinqSamples\LinqSamples.csproj", "{8E696146-01D1-4650-B19D-97C6B191D892}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{CF356557-9EE2-482E-99F1-A671951ADD20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF356557-9EE2-482E-99F1-A671951ADD20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF356557-9EE2-482E-99F1-A671951ADD20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E696146-01D1-4650-B19D-97C6B191D892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E696146-01D1-4650-B19D-97C6B191D892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E696146-01D1-4650-B19D-97C6B191D892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E696146-01D1-4650-B19D-97C6B191D892}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
