@@ -5,6 +5,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
+// Example of DI Container
+builder.Services.AddTransient<IExampleService, ExampleService>();
+builder.Services.AddTransient<ExampleRequiringService>();
 
 // Define context object and the database connection string
 builder.Services.AddDbContext<ApiContext>(options =>
