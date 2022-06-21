@@ -6,6 +6,7 @@ namespace FourthProgram_WeatherAPI
     public class ApiContext : DbContext
     {
         public DbSet<WeatherForecast> WeatherForecasts { get; set; }
+        public DbSet<RainDetection> RainDetections { get; set; }
 
         public ApiContext(DbContextOptions<ApiContext> options)
             : base(options)
@@ -16,6 +17,7 @@ namespace FourthProgram_WeatherAPI
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<WeatherForecast>().ToTable("WeatherForecast");
+            modelBuilder.Entity<RainDetection>().ToTable("RainDetection");
         }
     }
 }
