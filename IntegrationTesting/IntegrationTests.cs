@@ -24,5 +24,19 @@ namespace IntegrationTesting
             Assert.True(result.First().Date > DateTime.Now);
 
         }
+
+        [Fact]
+        public async Task Post_WeatherAPI_InsertsNewForecast()
+        {
+            var apiUrl = @"https://localhost:7020";
+            var url = apiUrl.AppendPathSegment("weatherforecast");
+
+            var result = await Assert.ThrowsAsync<FlurlHttpException>(async () =>
+            {
+                await url.PostJsonAsync(null);
+            });
+
+            Assert.Equal(400, result.StatusCode);
+        }
     }
 }
