@@ -11,6 +11,9 @@
     <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0-preview.4.22229.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0-preview.4.22229.2" />
+    <PackageReference Include="Serilog" Version="2.11.1-dev-01397" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="3.0.1-dev-00077" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.1-dev-00947" />
   </ItemGroup>
 
 </Project>

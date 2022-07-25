@@ -5,13 +5,18 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
+
+
 // Example of DI Container
 builder.Services.AddTransient<IExampleService, ExampleService>();
 builder.Services.AddTransient<ExampleRequiringService>();
 
+builder.Logging.AddFile("Logs/WeatherAPI-{Date}.txt");
+
 // Define context object and the database connection string
 builder.Services.AddDbContext<ApiContext>(options =>
   options.UseSqlServer(@"Server=localhost\SQLEXPRESS;Database=WeatherForecast;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=False;"));
+
 
 var app = builder.Build();
 

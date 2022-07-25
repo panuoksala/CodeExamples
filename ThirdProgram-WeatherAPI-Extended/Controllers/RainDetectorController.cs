@@ -17,9 +17,9 @@ namespace ThirdProgram_WeatherAPI_Extended.Controllers
         [HttpGet()]
         public IActionResult GetDetection(string city)
         {
-            if(Detections.Any(_ => string.Equals(_.City, city)))
+            if(Detections.Any(_ => _.City == city))
             {
-                return Ok(Detections.Single(_ => string.Equals(_.City, city)));
+                return Ok(Detections.Single(_ => _.City == city));
             }
             else
             {
@@ -31,6 +31,12 @@ namespace ThirdProgram_WeatherAPI_Extended.Controllers
         public IActionResult GetMaxCity()
         {
             return Ok(Detections.MaxBy(_ => _.Amount));
+        }
+
+        [HttpGet("all")]
+        public IActionResult GetAll()
+        {
+            return Ok(Detections);
         }
 
         [HttpPost]

@@ -2,5 +2,6 @@
 {
     public interface IExampleService
     {
+        List<WeatherForecast> GetForecasts();
     }
 }
