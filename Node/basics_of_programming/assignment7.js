@@ -23,7 +23,7 @@ const options = {
     path: '/v1/variable/74/events/json?' + queryString,
     method: 'GET',
     headers: {
-        'x-api-key': 'NDDgQs9wqm157eWRT0hiG9Y7QYS1InAW96siuGnQ',
+        'x-api-key': '',
         'Accept': 'application/json'
     }
 };
