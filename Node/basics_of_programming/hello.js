@@ -15,5 +15,11 @@ console.log(bool);
 let obj = new Object({ TestProperty: "Test string inside property"});
 console.log(obj["TestProperty"]);
 
+dateobj = new Date(2022, 12, 15);
+string = "TestTwo";
+number = 15;
+bool = false;
+obj.TestProperty = "Hi!";
+
 console.log(string + ' ' + number + ' ' + bool + ' ' + obj["TestProperty"]);
 
