@@ -19,6 +19,14 @@ namespace UnitTesting
         {
             _writer.WriteToFile(content);
 
+            var dictionary = new Dictionary<int, string>();
+            dictionary.Add(1, "First");
+            dictionary.Add(2, "Second");
+            dictionary.Add(3, "Third");
+
+            var second = dictionary[2];
+            dictionary.Remove(2);
+
             return content;
         }
     }
