@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqSamples", "LinqSamples\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructures", "DataStructures\DataStructures.csproj", "{CDE5D756-6E08-43BB-A092-69CA97050BC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingAssignment", "LoggingAssignment\LoggingAssignment.csproj", "{F8A8746B-EA21-44BE-B6C8-609073477505}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggingAssignment", "LoggingAssignment\LoggingAssignment.csproj", "{F8A8746B-EA21-44BE-B6C8-609073477505}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureToggleDemo", "FeatureToggleDemo\FeatureToggleDemo.csproj", "{91029D81-3B91-4E1A-9E25-7C3598D9FC33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{F8A8746B-EA21-44BE-B6C8-609073477505}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8A8746B-EA21-44BE-B6C8-609073477505}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8A8746B-EA21-44BE-B6C8-609073477505}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91029D81-3B91-4E1A-9E25-7C3598D9FC33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91029D81-3B91-4E1A-9E25-7C3598D9FC33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91029D81-3B91-4E1A-9E25-7C3598D9FC33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91029D81-3B91-4E1A-9E25-7C3598D9FC33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
