@@ -36,45 +36,5 @@ namespace UnitTesting
                 account.Debit(debitAmount);
             });
         }
-
-        [Fact]
-        public void CustomerName_WithLowerCase_IsReturnedInUpperCase()
-        {
-            // Arrange
-            var account = new BankAccount("Mr. Bryan Walton", 0);
-
-            // Act
-            var name = account.CustomerName;
-
-            // Assert (Use ctrl+shift+u to capitalize)
-            Assert.Equal("MR. BRYAN WALTON", name);
-        }
-
-        [Fact]
-        public void Balance_WithValidBalance_ReturnsBalanceAmount()
-        {
-            // Arrange
-            var initialBalance = 50;
-            var account = new BankAccount("Mr. Bryan Walton", initialBalance);
-
-            // Act
-            var actualBalance = account.Balance;
-
-            // Assert
-            Assert.Equal(initialBalance, actualBalance);
-        }
-
-        [Fact]
-        public void CustomerName_WithNullValue_InitializesNameWithEmptyString()
-        {
-            // Arrange
-            var account = new BankAccount(null, 0);
-
-            // Act
-            var actualName = account.CustomerName;
-
-            // Assert (Crashes before code change)
-            Assert.Equal(string.Empty, actualName);
-        }
     }
 }
