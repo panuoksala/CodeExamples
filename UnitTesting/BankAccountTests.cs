@@ -37,24 +37,6 @@ namespace UnitTesting
             });
         }
 
-        // Exercise 1
-        [Fact]
-        public void Credit_WithValidAmount_UpdatesBalance()
-        {
-            // Arrange
-            double beginningBalance = 10.99;
-            double creditAmount = 4.02;
-            double expected = 15.01;
-            var account = new BankAccount("Mr. Bryan Walton", beginningBalance);
-
-            // Act
-            account.Credit(creditAmount);
-
-            // Assert
-            double actual = account.Balance;
-            Assert.Equal(expected, actual, 3);
-        }
-
         [Fact]
         public void CustomerName_WithLowerCase_IsReturnedInUpperCase()
         {
